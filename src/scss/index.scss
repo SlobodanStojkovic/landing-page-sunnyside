@@ -1,3 +1,64 @@
+/* barlow-600 - latin */
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/barlow-v11-latin-600.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/barlow-v11-latin-600.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/barlow-v11-latin-600.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/barlow-v11-latin-600.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/barlow-v11-latin-600.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/barlow-v11-latin-600.svg#Barlow")
+      format("svg"); /* Legacy iOS */
+}
+
+/* fraunces-700 - latin */
+@font-face {
+  font-family: "Fraunces 700";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/fraunces-v10-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/fraunces-v10-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/fraunces-v10-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/fraunces-v10-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/fraunces-v10-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/fraunces-v10-latin-700.svg#Fraunces") format("svg"); /* Legacy iOS */
+}
+/* fraunces-900 - latin */
+@font-face {
+  font-family: "Fraunces 900";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/fraunces-v10-latin-900.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/fraunces-v10-latin-900.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/fraunces-v10-latin-900.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/fraunces-v10-latin-900.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/fraunces-v10-latin-900.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/fraunces-v10-latin-900.svg#Fraunces") format("svg"); /* Legacy iOS */
+}
+
+$barlow: "Barlow";
+$fraunces700: "Fraunces 700";
+$fraunces900: "Fraunces 900";
+$white: white;
+$black: black;
+$gray: #808397;
+$darkgray: #24303e;
+$yellow: #fbd600;
+
 * {
   box-sizing: border-box;
 }
@@ -16,4 +77,90 @@ img {
 
 body {
   line-height: 1;
+}
+
+.header {
+  height: 100vh;
+  text-align: center;
+  background-image: url(../img/mobile/image-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 32px;
+
+    &__menu {
+      list-style-type: none;
+      display: none;
+      flex-direction: column;
+      background-color: $white;
+      padding: 32px;
+      width: 100%;
+      height: 70vh;
+      margin-top: 0;
+
+      &__item {
+        padding: 32px;
+
+        &:nth-child(4) {
+          background-color: $yellow;
+          padding: 16px 32px;
+          width: fit-content;
+          border-radius: 28px;
+          text-align: center;
+          margin: 0 auto;
+        }
+
+        &__link {
+          text-decoration: none;
+          font-family: $barlow;
+          font-size: 20px;
+          line-height: 25px;
+          letter-spacing: -0.142857px;
+          color: $gray;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    align-self: center;
+    font-family: $fraunces900;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    letter-spacing: 6.25px;
+    text-transform: uppercase;
+    color: $white;
+    padding: 88px 32px 52px 32px;
+  }
+}
+
+.contact {
+  color: $darkgray;
+  font-family: $fraunces700;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.107143px;
+  text-transform: uppercase;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 24px solid $white;
+  border-left: 24px solid transparent;
+
+  &__wrapper {
+    display: none;
+    justify-content: flex-end;
+    width: 100%;
+  }
 }
