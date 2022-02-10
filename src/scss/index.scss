@@ -58,7 +58,7 @@ $black: black;
 $gray: #808397;
 $darkgray: #24303e;
 $yellow: #fbd600;
-$yellowLight: #FAD400;
+$yellowLight: #fad400;
 $lightRed: #fe7766;
 $darkGreen: #24554a;
 $darkBlue: #052c3b;
@@ -98,11 +98,31 @@ body {
   display: flex;
   flex-direction: column;
 
+  @media (min-width: 768px) {
+    background-image: url(../img/desktop/image-header.jpg);
+    height: 89vh;
+  }
+
   &__nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 32px;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__logo {
+      @media (min-width: 768px) {
+        align-self: center;
+      }
+    }
+
+    &__hamburger {
+      display: none;
+    }
 
     &__menu {
       list-style-type: none;
@@ -114,8 +134,22 @@ body {
       height: 50vh;
       margin-top: 0;
 
+      @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        background: none;
+        height: auto;
+        width: auto;
+        padding: 0;
+        margin: 0;
+      }
+
       &__item {
         padding: 32px;
+
+        @media (min-width: 768px) {
+          padding: 18px 47px;
+        }
 
         &:nth-child(4) {
           background-color: $yellow;
@@ -124,6 +158,12 @@ body {
           border-radius: 28px;
           text-align: center;
           margin: 0 auto;
+
+          @media (min-width: 768px) {
+            margin: 0;
+            background-color: $white;
+            align-self: center;
+          }
         }
 
         &__link {
@@ -133,6 +173,13 @@ body {
           line-height: 25px;
           letter-spacing: -0.142857px;
           color: $gray;
+
+          @media (min-width: 768px) {
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: -0.128571px;
+            color: $white;
+          }
         }
       }
     }
@@ -149,6 +196,15 @@ body {
     text-transform: uppercase;
     color: $white;
     padding: 88px 32px 52px 32px;
+
+    @media (min-width: 768px) {
+      font-family: $fraunces900;
+      font-size: 56px;
+      line-height: 69px;
+      text-align: center;
+      letter-spacing: 8.75px;
+      padding: 120px 32px 96px 32px;
+    }
   }
 }
 
@@ -171,15 +227,33 @@ body {
     display: none;
     justify-content: flex-end;
     width: 100%;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 }
 
 .main {
   &__transform {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
     &__wrapper {
-      padding: 36px 24px;
       display: flex;
       flex-direction: column;
+      padding: 36px 24px;
+
+      @media (min-width: 768px) {
+        width: 445px;
+        height: 285px;
+        align-self: center;
+        padding: 0;
+        margin: 0 auto;
+        justify-content: center;
+      }
 
       &__title {
         font-family: $fraunces900;
@@ -188,6 +262,11 @@ body {
         text-align: center;
         letter-spacing: -0.228571px;
         padding: 0 0 24px 0;
+
+        @media (min-width: 768px) {
+          text-align: start;
+          padding: 0 0 32px 0;
+        }
       }
 
       &__text {
@@ -198,6 +277,11 @@ body {
         letter-spacing: -0.128571px;
         color: $gray;
         padding: 0 0 32px 0;
+
+        @media (min-width: 768px) {
+          text-align: start;
+          padding: 0 0 40px 0;
+        }
       }
 
       &__learn-more {
@@ -212,22 +296,51 @@ body {
         mix-blend-mode: normal;
         width: fit-content;
         align-self: center;
+
+        @media (min-width: 768px) {
+          align-self: flex-start;
+        }
       }
     }
 
     &__img-div {
+      @media (min-width: 768px) {
+        width: 50%;
+        order: 1;
+      }
+
       &__img {
         width: 100%;
+
+        @media (min-width: 768px) {
+          height: 100%;
+        }
       }
     }
   }
 
   &__stand-out {
     padding: 32px 0;
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+    }
+
     &__wrapper {
       padding: 36px 24px;
       display: flex;
       flex-direction: column;
+
+      @media (min-width: 768px) {
+        width: 445px;
+        height: 285px;
+        align-self: center;
+        padding: 0;
+        margin: 0 auto;
+        justify-content: center;
+      }
 
       &__title {
         font-family: $fraunces900;
@@ -236,6 +349,11 @@ body {
         text-align: center;
         letter-spacing: -0.228571px;
         padding: 0 0 24px 0;
+
+        @media (min-width: 768px) {
+          text-align: start;
+          padding: 0 0 32px 0;
+        }
       }
 
       &__text {
@@ -246,6 +364,11 @@ body {
         letter-spacing: -0.128571px;
         color: $gray;
         padding: 0 0 32px 0;
+
+        @media (min-width: 768px) {
+          text-align: start;
+          padding: 0 0 40px 0;
+        }
       }
 
       &__learn-more {
@@ -260,12 +383,23 @@ body {
         mix-blend-mode: normal;
         width: fit-content;
         align-self: center;
+
+        @media (min-width: 768px) {
+          align-self: flex-start;
+        }
       }
     }
 
     &__img-div {
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+
       &__img {
         width: 100%;
+        @media (min-width: 768px) {
+          height: 100%;
+        }
       }
     }
   }
@@ -423,6 +557,7 @@ body {
   &__logo {
     text-align: center;
     padding: 64px 0 40px 0;
+    fill: $green;
   }
 
   &__nav {
