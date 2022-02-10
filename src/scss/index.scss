@@ -58,6 +58,15 @@ $black: black;
 $gray: #808397;
 $darkgray: #24303e;
 $yellow: #fbd600;
+$yellowLight: #FAD400;
+$lightRed: #fe7766;
+$darkGreen: #24554a;
+$darkBlue: #052c3b;
+$lightGray: #a7aaad;
+$blueGray: #5b636d;
+$lightGreen: #90d4c6;
+$green: #2c7566;
+$greenLink: #458d7e;
 
 * {
   box-sizing: border-box;
@@ -80,7 +89,7 @@ body {
 }
 
 .header {
-  height: 100vh;
+  height: 75vh;
   text-align: center;
   background-image: url(../img/mobile/image-header.jpg);
   background-size: cover;
@@ -102,7 +111,7 @@ body {
       background-color: $white;
       padding: 32px;
       width: 100%;
-      height: 70vh;
+      height: 50vh;
       margin-top: 0;
 
       &__item {
@@ -162,5 +171,286 @@ body {
     display: none;
     justify-content: flex-end;
     width: 100%;
+  }
+}
+
+.main {
+  &__transform {
+    &__wrapper {
+      padding: 36px 24px;
+      display: flex;
+      flex-direction: column;
+
+      &__title {
+        font-family: $fraunces900;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        letter-spacing: -0.228571px;
+        padding: 0 0 24px 0;
+      }
+
+      &__text {
+        font-family: $barlow;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: -0.128571px;
+        color: $gray;
+        padding: 0 0 32px 0;
+      }
+
+      &__learn-more {
+        text-align: center;
+        padding: 0px 9px;
+        font-family: $fraunces900;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-bottom: rgb(250, 212, 0, 0.25) solid 8px;
+        mix-blend-mode: normal;
+        width: fit-content;
+        align-self: center;
+      }
+    }
+
+    &__img-div {
+      &__img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__stand-out {
+    padding: 32px 0;
+    &__wrapper {
+      padding: 36px 24px;
+      display: flex;
+      flex-direction: column;
+
+      &__title {
+        font-family: $fraunces900;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        letter-spacing: -0.228571px;
+        padding: 0 0 24px 0;
+      }
+
+      &__text {
+        font-family: $barlow;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: -0.128571px;
+        color: $gray;
+        padding: 0 0 32px 0;
+      }
+
+      &__learn-more {
+        text-align: center;
+        padding: 0px 9px;
+        font-family: $fraunces900;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-bottom: rgb(254, 119, 102, 0.25) solid 8px;
+        mix-blend-mode: normal;
+        width: fit-content;
+        align-self: center;
+      }
+    }
+
+    &__img-div {
+      &__img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__graphic-design {
+    background-image: url(../img/mobile/image-graphic-design.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @media (min-width: 768px) {
+      background-image: url(../img/desktop/image-graphic-design.jpg);
+    }
+
+    &__title {
+      font-family: $fraunces900;
+      font-size: 28px;
+      line-height: 35px;
+      text-align: center;
+      letter-spacing: -0.2px;
+      color: $darkGreen;
+      padding: 400px 0 27px 0;
+    }
+
+    &__text {
+      font-family: $barlow;
+      font-size: 16px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: -0.114286px;
+      color: $darkGreen;
+      padding: 0 24px 59px 24px;
+    }
+  }
+
+  &__photography {
+    background-image: url(../img/mobile/image-photography.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @media (min-width: 768px) {
+      background-image: url(../img/desktop/image-photography.jpg);
+    }
+
+    &__title {
+      font-family: $fraunces900;
+      font-size: 28px;
+      line-height: 35px;
+      text-align: center;
+      letter-spacing: -0.2px;
+      color: $darkBlue;
+      mix-blend-mode: normal;
+      opacity: 0.75;
+      padding: 400px 0 27px 0;
+    }
+
+    &__text {
+      font-family: $barlow;
+      font-size: 16px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: -0.114286px;
+      color: $darkGreen;
+      padding: 0 24px 59px 24px;
+    }
+  }
+
+  &__testimonials {
+    &__title {
+      text-transform: uppercase;
+      font-family: $fraunces900;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 4px;
+      color: $lightGray;
+      padding: 64px 0;
+    }
+
+    &__first,
+    &__second,
+    &__third {
+      display: flex;
+      flex-direction: column;
+
+      &__photo-wrapper {
+        align-self: center;
+
+        &__img {
+          border-radius: 50%;
+          width: 72px;
+          height: 72px;
+        }
+      }
+
+      &__testimony {
+        font-family: $barlow;
+        font-size: 18px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: -0.128571px;
+        color: $blueGray;
+        padding: 32px 24px;
+      }
+
+      &__name {
+        font-family: $fraunces900;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.128571px;
+        color: $darkgray;
+        padding-bottom: 9px;
+      }
+
+      &__position {
+        font-family: $barlow;
+        font-size: 14px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: -0.1px;
+        color: $lightGray;
+        padding-bottom: 64px;
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+
+    & picture {
+      width: 50%;
+
+      & img {
+        vertical-align: middle;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $lightGreen;
+
+  &__logo {
+    text-align: center;
+    padding: 64px 0 40px 0;
+  }
+
+  &__nav {
+    &__menu {
+      display: flex;
+      justify-content: space-around;
+
+      &__item {
+        list-style-type: none;
+
+        &__link {
+          text-decoration: none;
+          font-family: $barlow;
+          font-size: 18px;
+          line-height: 25px;
+          letter-spacing: -0.128571px;
+          color: $greenLink;
+        }
+      }
+    }
+  }
+
+  &__social {
+    text-align: center;
+    padding: 90px 0 81px 0;
+
+    &__link {
+      padding: 28px;
+    }
   }
 }

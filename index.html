@@ -61,6 +61,20 @@
 
     <main class="main">
       <section class="main__transform">
+        <div class="main__transform__img-div">
+          <picture>
+            <source
+              srcset="../src/img/desktop/image-transform.jpg"
+              media="(min-width: 768px)"
+            />
+            <img
+              class="main__transform__img-div__img"
+              src="../src/img/mobile/image-transform.jpg"
+              alt=""
+            />
+          </picture>
+        </div>
+
         <div class="main__transform__wrapper">
           <div class="main__transform__wrapper__title">
             Transform your brand
@@ -72,24 +86,34 @@
           </div>
           <div class="main__transform__wrapper__learn-more">Learn more</div>
         </div>
-
-        <div class="main__transform__img"></div>
       </section>
 
       <section class="main__stand-out">
+        <div class="main__stand-out__img-div">
+          <picture>
+            <source
+              srcset="../src/img/desktop/image-stand-out.jpg"
+              media="(min-width: 768px)"
+            />
+            <img
+              class="main__stand-out__img-div__img"
+              src="../src/img/mobile/image-stand-out.jpg"
+              alt=""
+            />
+          </picture>
+        </div>
+
         <div class="main__stand-out__wrapper">
           <div class="main__stand-out__wrapper__title">
-            Transform your brand
+            Stand out to the right audience
           </div>
           <div class="main__stand-out__wrapper__text">
-            We are a full-service creative agency specializing in helping brands
-            grow fast. Engage your clients through compelling visuals that do
-            most of the marketing for you.
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
           </div>
           <div class="main__stand-out__wrapper__learn-more">Learn more</div>
         </div>
-
-        <div class="main__stand-out__img"></div>
       </section>
 
       <section class="main__graphic-design">
@@ -111,12 +135,13 @@
       </section>
 
       <section class="main__testimonials">
+        <div class="main__testimonials__title">Client Testimonials</div>
         <div class="main__testimonials__first">
           <div class="main__testimonials__first__photo-wrapper">
             <img
               class="main__testimonials__first__photo-wrapper__img"
-              src=""
-              alt=""
+              src="./src/img/image-emily.jpg"
+              alt="emily portrait"
             />
           </div>
           <div class="main__testimonials__first__testimony">
@@ -133,8 +158,8 @@
           <div class="main__testimonials__second__photo-wrapper">
             <img
               class="main__testimonials__second__photo-wrapper__img"
-              src=""
-              alt=""
+              src="./src/img/image-thomas.jpg"
+              alt="thomas portrait"
             />
           </div>
           <div class="main__testimonials__second__testimony">
@@ -151,8 +176,8 @@
           <div class="main__testimonials__third__photo-wrapper">
             <img
               class="main__testimonials__third__photo-wrapper__img"
-              src=""
-              alt=""
+              src="./src/img/image-jennie.jpg"
+              alt="jennie portrait"
             />
           </div>
           <div class="main__testimonials__third__testimony">
@@ -236,10 +261,15 @@
       </div>
 
       <div class="footer__social">
-        <a class="footer__social__link" href=""></a>
-        <a class="footer__social__link" href=""></a>
-        <a class="footer__social__link" href=""></a>
-        <a class="footer__social__link" href=""></a>
+        <a class="footer__social__link" href="#">
+          <img src="./src/img/icon-facebook.svg" alt="facebook icon" /></a
+        ><a class="footer__social__link" href="#"
+          ><img src="./src/img/icon-instagram.svg" alt="instagram icon" /></a
+        ><a class="footer__social__link" href="#"
+          ><img src="./src/img/icon-twitter.svg" alt="twitter icon" /></a
+        ><a class="footer__social__link" href="#"
+          ><img src="./src/img/icon-pinterest.svg" alt="pinterest icon"
+        /></a>
       </div>
     </footer>
 
