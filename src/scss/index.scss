@@ -110,8 +110,12 @@ body {
     padding: 32px;
 
     @media (min-width: 768px) {
-      display: flex;
       flex-direction: row;
+      padding: 21px;
+    }
+
+    @media (min-width: 792px) {
+      padding: 32px;
     }
 
     &__logo {
