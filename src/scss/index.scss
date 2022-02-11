@@ -121,7 +121,9 @@ body {
     }
 
     &__hamburger {
-      display: none;
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
 
     &__menu {
@@ -163,6 +165,19 @@ body {
             margin: 0;
             background-color: $white;
             align-self: center;
+
+            &:hover {
+              color: $white;
+              cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+
+              a:first-child {
+                color: $white;
+              }
+            }
+
+            &:hover {
+              background-color: rgb(255, 255, 255, 0.25);
+            }
           }
         }
 
@@ -173,6 +188,10 @@ body {
           line-height: 25px;
           letter-spacing: -0.142857px;
           color: $gray;
+
+          &:hover {
+            cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+          }
 
           @media (min-width: 768px) {
             font-size: 18px;
@@ -222,6 +241,10 @@ body {
   height: 0;
   border-bottom: 24px solid $white;
   border-left: 24px solid transparent;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 
   &__wrapper {
     display: none;
@@ -296,6 +319,10 @@ body {
         mix-blend-mode: normal;
         width: fit-content;
         align-self: center;
+
+        &:hover {
+          cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+        }
 
         @media (min-width: 768px) {
           align-self: flex-start;
@@ -383,6 +410,10 @@ body {
         mix-blend-mode: normal;
         width: fit-content;
         align-self: center;
+
+        &:hover {
+          cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+        }
 
         @media (min-width: 768px) {
           align-self: flex-start;
@@ -500,8 +531,10 @@ body {
     }
 
     &__wrapper {
-      display: flex;
-      padding: 0 165px 64px;
+      @media (min-width: 768px) {
+        display: flex;
+        padding: 0 165px 64px;
+      }
     }
 
     &__first,
@@ -586,6 +619,7 @@ body {
       justify-content: space-around;
 
       @media (min-width: 768px) {
+        display: flex;
         justify-content: center;
         gap: 57px;
       }
@@ -600,6 +634,10 @@ body {
           line-height: 25px;
           letter-spacing: -0.128571px;
           color: $greenLink;
+
+          &:hover {
+            cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+          }
         }
       }
     }
@@ -611,6 +649,22 @@ body {
 
     &__link {
       padding: 28px;
+
+      & :hover {
+        cursor: url(../img/pointer-hand.svg) 4 4, pointer;
+      }
+
+      & :hover {
+        fill: $white;
+      }
     }
   }
+}
+
+.noDisplay {
+  display: none;
+}
+
+.addDisplay {
+  display: flex;
 }
